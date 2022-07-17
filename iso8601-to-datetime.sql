@@ -55,7 +55,6 @@ BEGIN
     DECLARE offset_hour INTEGER;
     DECLARE offset_minute INTEGER;
     DECLARE utc_datetime_str TEXT;
-    DECLARE datetime_str TEXT;
     DECLARE offset_precision_pos INTEGER;
     DECLARE offset_precision_str TEXT;
     DECLARE offset_microseconds INTEGER;
@@ -149,5 +148,3 @@ BEGIN
 END;
 $$
 DELIMITER ;
-
--- ----------------------------------------------------------------
