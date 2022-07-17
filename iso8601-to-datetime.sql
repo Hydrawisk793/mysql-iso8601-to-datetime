@@ -1,5 +1,12 @@
 -- ----------------------------------------------------------------
--- @brief Converts an ISO 8601 string to a MySQL DATETIME(6) value.
+-- Converts an ISO 8601 string to a MySQL DATETIME(6) value.
+--
+-- <p>
+-- Because the minimum DATETIME(6) value in MySQL is '1000-01-01 00:00:00.000000',
+-- This function does not support the expanded year representation. (e.g. '±YYYYYY')
+-- The number of digits of a year MUST ALWAYS BE 4. ('YYYY')
+-- </p>
+--
 -- @param iso8601_value an ISO 8601 string.
 -- @return an DATETIME(6) value without offset.
 -- <pre>
