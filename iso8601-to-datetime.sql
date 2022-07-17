@@ -80,13 +80,13 @@ BEGIN
         END IF;
     END IF;
 
-    SET offset_pos = LENGTH(iso8601_value) - LENGTH(substring_index(iso8601_value, '+', -1));
+    SET offset_pos = LENGTH(iso8601_value) - LENGTH(SUBSTRING_INDEX(iso8601_value, '+', -1));
     IF offset_pos > date_time_delimiter_pos
     THEN
         SET has_offset = 1;
         SET offset_sign = -1;
     ELSE
-        SET offset_pos = LENGTH(iso8601_value) - LENGTH(substring_index(iso8601_value, '-', -1));
+        SET offset_pos = LENGTH(iso8601_value) - LENGTH(SUBSTRING_INDEX(iso8601_value, '-', -1));
         IF offset_pos > date_time_delimiter_pos
         THEN
             SET has_offset = 1;
